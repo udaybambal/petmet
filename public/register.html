@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register your dog — PawMilan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">🐾 PawMilan</div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a class="btn" href="/register.html">Register</a>
+    </div>
+  </nav>
+
+  <section class="section form-section">
+    <h1>List your dog</h1>
+    <p>Help the community find a perfect match by adding your dog’s details.</p>
+
+    <form id="regForm" class="form" enctype="multipart/form-data">
+      <div class="grid-2">
+        <div class="field">
+          <label>Owner name *</label>
+          <input name="ownerName" required placeholder="Your full name" />
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <input name="phone" placeholder="+91 ..." />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label>City *</label>
+          <input name="city" required placeholder="e.g., Mumbai" />
+        </div>
+        <div class="field">
+          <label>State</label>
+          <input name="state" placeholder="e.g., Maharashtra" />
+        </div>
+        <div class="field">
+          <label>Pincode</label>
+          <input name="pincode" placeholder="e.g., 400001" />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="field">
+          <label>Breed *</label>
+          <input name="breed" required placeholder="e.g., Golden Retriever" />
+        </div>
+        <div class="field">
+          <label>Gender *</label>
+          <select name="gender" required>
+            <option value="">Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Age (months)</label>
+          <input type="number" min="1" name="ageMonths" placeholder="e.g., 24" />
+        </div>
+        <div class="field">
+          <label>Vaccinated?</label>
+          <select name="vaccinated">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="field">
+          <label>Service type</label>
+          <select name="serviceType">
+            <option>Stud Service</option>
+            <option>Mating Assistance</option>
+            <option>Boarding during heat</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>About your dog</label>
+          <textarea name="description" rows="3" placeholder="Temperament, health records, preferences..."></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Upload images (up to 8)</label>
+        <input id="dogImages" name="dogImages" type="file" accept="image/*" multiple />
+        <div id="preview" class="preview"></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Submit</button>
+        <a class="btn btn-outline" href="/">Cancel</a>
+      </div>
+
+      <div id="msg" class="msg" role="status"></div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> PawMilan • Made with ❤️ for dogs across India</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const preview = document.getElementById('preview');
+    const fileInput = document.getElementById('dogImages');
+    fileInput.addEventListener('change', () => {
+      preview.innerHTML = '';
+      [...fileInput.files].slice(0, 8).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          img.alt = file.name;
+          preview.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+
+    const form = document.getElementById('regForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('msg');
+      msg.textContent = 'Submitting...';
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch('/api/register', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Failed to submit');
+        msg.textContent = 'Registered successfully! Redirecting...';
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 1200);
+      } catch (err) {
+        msg.textContent = err.message || 'Something went wrong';
+      }
+    });
+  </script>
+</body>
+</html>
