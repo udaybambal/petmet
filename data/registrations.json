@@ -1,0 +1,78 @@
+[
+  {
+    "id": "seed-1",
+    "ownerName": "Aarav Sharma",
+    "phone": "+91 98765 43210",
+    "email": "aarav@example.com",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400001",
+    "breed": "Labrador Retriever",
+    "gender": "Male",
+    "ageMonths": 24,
+    "vaccinated": true,
+    "serviceType": "Stud Service",
+    "description": "Friendly lab with champion lineage, great temperament.",
+    "imageUrls": [
+      "https://place.dog/600/400"
+    ],
+    "createdAt": "2025-08-08T18:57:38.883Z"
+  },
+  {
+    "id": "seed-2",
+    "ownerName": "Diya Patel",
+    "phone": "+91 99887 76655",
+    "email": "diya@example.com",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "pincode": "380001",
+    "breed": "German Shepherd",
+    "gender": "Female",
+    "ageMonths": 30,
+    "vaccinated": true,
+    "serviceType": "Mating Assistance",
+    "description": "Well-trained and healthy, looking for a compatible mate.",
+    "imageUrls": [
+      "https://place.dog/600/401"
+    ],
+    "createdAt": "2025-08-08T18:57:38.883Z"
+  },
+  {
+    "id": "seed-3",
+    "ownerName": "Rohan Gupta",
+    "phone": "+91 91234 56789",
+    "email": "rohan@example.com",
+    "city": "Delhi",
+    "state": "Delhi",
+    "pincode": "110001",
+    "breed": "Beagle",
+    "gender": "Male",
+    "ageMonths": 18,
+    "vaccinated": true,
+    "serviceType": "Stud Service",
+    "description": "Playful beagle, great with families.",
+    "imageUrls": [
+      "https://place.dog/600/402"
+    ],
+    "createdAt": "2025-08-08T18:57:38.883Z"
+  },
+  {
+    "id": "seed-4",
+    "ownerName": "Meera Nair",
+    "phone": "+91 90000 11122",
+    "email": "meera@example.com",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560001",
+    "breed": "Golden Retriever",
+    "gender": "Female",
+    "ageMonths": 28,
+    "vaccinated": true,
+    "serviceType": "Stud Service",
+    "description": "Calm and loving golden, excellent health records.",
+    "imageUrls": [
+      "https://place.dog/600/403"
+    ],
+    "createdAt": "2025-08-08T18:57:38.883Z"
+  }
+]
