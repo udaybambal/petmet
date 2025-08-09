@@ -1,85 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PawMilan — India’s Cutest Dog Breeding Matchmaker</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <nav class="nav">
-    <div class="brand">🐾 PawMilan</div>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="#services">Services</a>
-      <a href="#nearby">Find Near Me</a>
-      <a class="btn" href="/register.html">Register</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Find the perfect match for your dog, near you</h1>
-      <p>Verified profiles, adorable matches, and stress-free breeding assistance across India.</p>
-      <div class="search-row">
-        <input id="cityInput" type="text" placeholder="Enter your city (e.g., Mumbai)" />
-        <button id="searchBtn" class="btn">Search</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PetMet — India’s Cutest Dog Breeding Matchmaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="brand">🐾 PetMet</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#services">Services</a>
+        <a href="#nearby">Find Near Me</a>
+        <a class="btn" href="/register.html">Register</a>
       </div>
-      <div class="hero-cta">
-        <a class="btn btn-outline" href="#nearby">Browse Nearby</a>
-        <a class="btn" href="/register.html">List Your Dog</a>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Find the perfect match for your dog, near you</h1>
+        <p>
+          Verified profiles, adorable matches, and stress-free breeding
+          assistance across India.
+        </p>
+        <div class="search-row">
+          <input
+            id="cityInput"
+            type="text"
+            placeholder="Enter your city (e.g., Pune)"
+          />
+          <button id="searchBtn" class="btn">Search</button>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-outline" href="#nearby">Browse Nearby</a>
+          <a class="btn" href="/register.html">List Your Dog</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-images">
-      <img src="https://place.dog/500/350" alt="Happy dog 1" />
-      <img src="https://place.dog/501/351" alt="Happy dog 2" />
-      <img src="https://place.dog/502/352" alt="Happy dog 3" />
-    </div>
-  </header>
-
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card">🐕‍🦺<h3>Stud Service</h3><p>Connect with healthy, verified studs and dams.</p></div>
-      <div class="service-card">🧬<h3>Genetic Guidance</h3><p>Breed pairing suggestions to promote healthy litters.</p></div>
-      <div class="service-card">🩺<h3>Health Checks</h3><p>Vaccination and vet-check indicators on profiles.</p></div>
-      <div class="service-card">📍<h3>Location Matching</h3><p>Find compatible partners near your city or pincode.</p></div>
-      <div class="service-card">🤝<h3>Mating Assistance</h3><p>From introductions to logistics, we’ve got you.</p></div>
-      <div class="service-card">🚖<h3>Transport Help</h3><p>Optional pickup and drop coordination.</p></div>
-    </div>
-  </section>
-
-  <section id="nearby" class="section">
-    <div class="section-head">
-      <h2>Matches near you</h2>
-      <div class="section-actions">
-        <input id="filterCity" type="text" placeholder="Filter by city" />
-        <button id="filterBtn" class="btn btn-small">Apply</button>
+      <div class="hero-images">
+        <img src="https://place.dog/500/350" alt="Happy dog 1" />
+        <img src="https://place.dog/501/351" alt="Happy dog 2" />
+        <img src="https://place.dog/502/352" alt="Happy dog 3" />
       </div>
-    </div>
-    <div id="cards" class="cards-grid"></div>
-  </section>
+    </header>
 
-  <section class="section">
-    <h2>Cutest Faces</h2>
-    <div class="gallery">
-      <img src="https://place.dog/400/300" alt="Dog A" />
-      <img src="https://place.dog/401/301" alt="Dog B" />
-      <img src="https://place.dog/402/302" alt="Dog C" />
-      <img src="https://place.dog/403/303" alt="Dog D" />
-      <img src="https://place.dog/404/304" alt="Dog E" />
-      <img src="https://place.dog/405/305" alt="Dog F" />
-    </div>
-  </section>
+    <section id="services" class="section">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          🐕‍🦺
+          <h3>Stud Service</h3>
+          <p>Connect with healthy, verified studs and dams.</p>
+        </div>
+        <div class="service-card">
+          🧬
+          <h3>Genetic Guidance</h3>
+          <p>Breed pairing suggestions to promote healthy litters.</p>
+        </div>
+        <div class="service-card">
+          🩺
+          <h3>Health Checks</h3>
+          <p>Vaccination and vet-check indicators on profiles.</p>
+        </div>
+        <div class="service-card">
+          📍
+          <h3>Location Matching</h3>
+          <p>Find compatible partners near your city or pincode.</p>
+        </div>
+        <div class="service-card">
+          🤝
+          <h3>Mating Assistance</h3>
+          <p>From introductions to logistics, we’ve got you.</p>
+        </div>
+        <div class="service-card">
+          🚖
+          <h3>Transport Help</h3>
+          <p>Optional pickup and drop coordination.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <div>© <span id="year"></span> PawMilan • Made with ❤️ for dogs across India</div>
-    <div class="footer-links"><a href="/register.html">Register</a> • <a href="#services">Services</a></div>
-  </footer>
+    <section id="nearby" class="section">
+      <div class="section-head">
+        <h2>Matches near you</h2>
+        <div class="section-actions">
+          <input id="filterCity" type="text" placeholder="Filter by city" />
+          <button id="filterBtn" class="btn btn-small">Apply</button>
+        </div>
+      </div>
+      <div id="cards" class="cards-grid"></div>
+    </section>
 
-  <script src="/app.js"></script>
-</body>
+    <section class="section">
+      <h2>Cutest Faces</h2>
+      <div class="gallery">
+        <img src="https://place.dog/400/300" alt="Dog A" />
+        <img src="https://place.dog/401/301" alt="Dog B" />
+        <img src="https://place.dog/402/302" alt="Dog C" />
+        <img src="https://place.dog/403/303" alt="Dog D" />
+        <img src="https://place.dog/404/304" alt="Dog E" />
+        <img src="https://place.dog/405/305" alt="Dog F" />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        © <span id="year"></span> PetMet • Made with ❤️ for dogs across India
+      </div>
+      <div class="footer-links">
+        <a href="/register.html">Register</a> • <a href="#services">Services</a>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
 </html>

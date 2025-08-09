@@ -1,5 +1,5 @@
 {
-  "name": "pawmilan",
+  "name": "PetMet",
   "version": "1.0.0",
   "description": "India’s cutest dog breeding matchmaker with image uploads and location-based search",
   "main": "server.js",
